@@ -12,7 +12,7 @@ public class Shop{
     int totalPriceOfCart = 0;
 
     for(String key : myShoppingCart.keySet()){
-      totalPriceOfCart += supermarketAllItem.getSupermarketAllItem().get(key).getItemPrice() * myShoppingCart.get(key);
+      totalPriceOfCart += superMartketAllItem.getSupermarket().get(key).getItemPrice() * myShoppingCart.get(key);
     }
 
     return totalPriceOfCart;
