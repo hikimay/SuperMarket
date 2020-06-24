@@ -7,7 +7,7 @@ public class Shop{
     supermarketAllItem = new SupermarketAllItem();
   }
 
-  public int TotalPrice(ShoppingCart shoppingCart){
+  public int totalPrice(ShoppingCart shoppingCart){
     return (int)(subTotalPrice(shoppingCart) * 1.1);
   }
 

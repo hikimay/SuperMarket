@@ -11,7 +11,7 @@ class ShoppingCart{
     this.shoppingCart = new HashMap<String, Integer>();
   }
   
-  public void addItemIntoCart(String itemIndex, int itemQuantity){
+  public void addItemIntoCart(String itemIndex, int itemQuantity) {
     this.shoppingCart.put(itemIndex, itemQuantity);
   }
 
@@ -24,7 +24,7 @@ class ShoppingCart{
     
   }
 
-  
+
 
   public Map<String,Integer> getShoppingCart(){
     return this.shoppingCart;
