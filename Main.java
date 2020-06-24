@@ -9,8 +9,13 @@ class Main {
     ShoppingCart shoppingCart = new ShoppingCart();
     Shop shop = new Shop();
     shoppingCart.addItemIntoCart("1", 3);
-    System.out.println(shop.sumPrice(shoppingCart));
+    System.out.println(shop.TotalPrice(shoppingCart));
     System.out.println(shoppingCart);
-    
+    shoppingCart.removeItemFromCart("1");
+    System.out.println(shop.TotalPrice(shoppingCart));
+    System.out.println(shoppingCart);
+    shoppingCart.removeItemFromCart("1");
+
+
   }
 }

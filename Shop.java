@@ -7,14 +7,16 @@ public class Shop{
     supermarketAllItem = new SupermarketAllItem();
   }
 
-  public int sumPriceTax(ShoppingCart )
+  public int TotalPrice(ShoppingCart shoppingCart){
+    return (int)(subTotalPrice(shoppingCart) * 1.1);
+  }
 
-  public int sumPriceWithoutTax(ShoppingCart shoppingCart){
+  public int subTotalPrice(ShoppingCart shoppingCart){
     Map<String,Integer> myShoppingCart = shoppingCart.getShoppingCart();
     int totalPriceOfCart = 0;
 
     for(String key : myShoppingCart.keySet()){
-      totalPriceOfCart += superMartketAllItem.getSupermarket().get(key).getItemPrice() * myShoppingCart.get(key);
+      totalPriceOfCart += supermarketAllItem.getSupermarketAllItem().get(key).getItemPrice() * myShoppingCart.get(key);
     }
 
     return totalPriceOfCart;

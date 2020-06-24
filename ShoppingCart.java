@@ -15,6 +15,17 @@ class ShoppingCart{
     this.shoppingCart.put(itemIndex, itemQuantity);
   }
 
+  public void removeItemFromCart(String itemIndex){
+    if(this.shoppingCart.containsKey(itemIndex)){
+      this.shoppingCart.remove(itemIndex);
+    }else{
+      System.out.println("商品がカートに含まれていません");
+    }
+    
+  }
+
+  
+
   public Map<String,Integer> getShoppingCart(){
     return this.shoppingCart;
   }
@@ -27,6 +38,9 @@ class ShoppingCart{
     }
     return tmp;
   }
+
+  
+
 
   
 }
