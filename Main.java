@@ -11,6 +11,6 @@ class Main {
     shoppingCart.addItemIntoCart("1", 3);
     System.out.println(shop.sumPrice(shoppingCart));
     System.out.println(shoppingCart);
-
+    
   }
 }

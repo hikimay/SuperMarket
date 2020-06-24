@@ -7,7 +7,9 @@ public class Shop{
     supermarketAllItem = new SupermarketAllItem();
   }
 
-  public int sumPrice(ShoppingCart shoppingCart){
+  public int sumPriceTax(ShoppingCart )
+
+  public int sumPriceWithoutTax(ShoppingCart shoppingCart){
     Map<String,Integer> myShoppingCart = shoppingCart.getShoppingCart();
     int totalPriceOfCart = 0;
 
