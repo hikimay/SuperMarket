@@ -1,7 +1,7 @@
-import java.util.Exceprion;
+import java.lang.Exception;
 
 class InvalidException extends Exception{
-  public InvalidExceprion(String message){
+  public InvalidException(String message){
     super(message);
   }
 }

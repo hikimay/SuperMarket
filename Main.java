@@ -8,51 +8,66 @@ class Main {
     Scanner sc = new Scanner(System.in);
     
     while(true){
-      System.out.print("case 0:exit\ncase 1: try function testPrintAll()\ncase 2: try function testAddCart()\ncase 3: try function testTotalPrice()\ncase 4: try function testRemove()\n");
       System.out.print("choose action >> ");
       int i = sc.nextInt();
       switch(i){
         case 0:return;
-        case 1:testPrintAll();break;
-        case 2:testAddCart();break;
-        case 3:testTotalPrice();break;
-        case 4:testRemove();break;
+        case 222:testForPair2();break;
       }
     }
   }
 
-
-  public static void testPrintAll(){
-    SupermarketAllItem supermarketAllItem = new SupermarketAllItem();
-    supermarketAllItem.printAllItem();
-    System.out.println("----------------------");
+	// pair(2)用のテスト
+  public static void testForPair2(){
+    try{
+			Shop shop = new Shop();
+			ShoppingCart shoppingCart = new ShoppingCart();
+			shoppingCart.addItemIntoCart("1", 3);
+			//System.out.println(shop.subTotalPrice(shoppingCart));
+			shoppingCart.subTotalPrice();
+			System.out.println(shoppingCart.beforeDiscount);
+			System.out.println("----------------------");
+    }catch(Exception e){
+      System.out.println(e.getMessage());
+    }
   }
 
-  public static void testAddCart(){
-    ShoppingCart shoppingCart = new ShoppingCart();
-    shoppingCart.addItemIntoCart("1", 3);
-    System.out.println(shoppingCart);
-    System.out.println("----------------------");
-  }
 
-  public static void testTotalPrice(){
-    Shop shop = new Shop();
-    ShoppingCart shoppingCart = new ShoppingCart();
-    shoppingCart.addItemIntoCart("1", 3);
-    System.out.println(shop.subTotalPrice(shoppingCart));
-    System.out.println(shop.totalPrice(shoppingCart));
-    System.out.println("----------------------");
-  }
+  // public static void testPrintAll(){
+  //   SupermarketAllItem supermarketAllItem = new SupermarketAllItem();
+  //   supermarketAllItem.printAllItem();
+  //   System.out.println("----------------------");
+  // }
+
+  // public static void testAddCart(){
+  //   try{
+  //   ShoppingCart shoppingCart = new ShoppingCart();
+  //   shoppingCart.addItemIntoCart("1", -1);
+  //   System.out.println(shoppingCart);
+  //   System.out.println("----------------------");
+  //   }catch(Exception e){
+  //     e.getMessage();
+  //   }
+  // }
+
+  // public static void testTotalPrice(){
+  //   Shop shop = new Shop();
+  //   ShoppingCart shoppingCart = new ShoppingCart();
+  //   shoppingCart.addItemIntoCart("1", 3);
+  //   //System.out.println(shop.subTotalPrice(shoppingCart));
+  //   System.out.println(shop.totalPrice(shoppingCart));
+  //   System.out.println("----------------------");
+  // }
  
-  public static void testRemove(){
-    ShoppingCart shoppingCart = new ShoppingCart();
-    shoppingCart.addItemIntoCart("1", 3);
-    System.out.println(shoppingCart);
-    shoppingCart.removeItemFromCart("1");
-    System.out.println(shoppingCart);
-    shoppingCart.removeItemFromCart("1");
-    System.out.println("----------------------");
-  }
+  // public static void testRemove(){
+  //   ShoppingCart shoppingCart = new ShoppingCart();
+  //   shoppingCart.addItemIntoCart("1", 3);
+  //   System.out.println(shoppingCart);
+  //   shoppingCart.removeItemFromCart("1");
+  //   System.out.println(shoppingCart);
+  //   shoppingCart.removeItemFromCart("1");
+  //   System.out.println("----------------------");
+  // }
 
 }
 
